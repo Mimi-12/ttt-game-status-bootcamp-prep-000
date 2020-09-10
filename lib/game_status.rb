@@ -30,5 +30,7 @@ def won?(board)
  end
 
  def full(board)
-   
+   board.all? do |postion|
+     postion == "X" || postion == "O"
  end
+end
