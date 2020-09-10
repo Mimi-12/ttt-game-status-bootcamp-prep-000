@@ -30,7 +30,15 @@ def won?(board)
  end
 
  def full(board)
-   board.all? do |postion|
-     postion == "X" || postion == "O"
+   board.all? do |position|
+     position == "X" || position == "O"
  end
+end
+
+def draw?(board)
+  !won?(board) && full?(board)
+end
+
+def over?(board)
+  won?(board) || draw?(board)
 end
